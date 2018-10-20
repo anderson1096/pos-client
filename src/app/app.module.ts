@@ -8,6 +8,8 @@ import { ProviderComponent} from './components/providers/provider.component';
 import { SaleComponent} from './components/sales/sale.component';
 import { AboutComponent} from './components/about/about.component';
 import { ClientComponent} from './components/clients/client.component';
+import { ProductService } from './services/product.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,12 @@ import { ClientComponent} from './components/clients/client.component';
   ],
   imports: [
     BrowserModule,
-    Routing
+    Routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

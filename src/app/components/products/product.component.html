@@ -1,1 +1,6 @@
 <p>Estos son los productos papá</p>
+<ul>
+    <li *ngFor="let product of products">
+        {{product.attributes.name}}
+    </li>
+</ul>
